@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BankValidator do
+describe BankValidator::Validator do
 
   A_VALID_BIC = 'AGRIFRPP812'
   A_VALID_IBAN = 'FR76 1120 6200 1012 1495 4641 151'
@@ -11,7 +11,7 @@ describe BankValidator do
 
   describe 'routing validation' do
     let(:options) { {} }
-    let(:bankvalidator) { BankValidator.new(options) }
+    let(:bankvalidator) { BankValidator::Validator.new(options) }
     subject { bankvalidator }
 
     context "when has an iban" do
@@ -46,7 +46,7 @@ describe BankValidator do
 
   describe '#validate_iban' do
     let(:options) { {} }
-    subject { BankValidator.new(options).send(:validate_iban, record) }
+    subject { BankValidator::Validator.new(options).send(:validate_iban, record) }
     let(:record) { mock_with(iban: iban) }
     [ 'F76 1120 6200 1012 1495 4641', 'FR76 1120 6200 1012 1495 4641', '93','1234' ].each do |invalid_iban|
       context "iban: #{invalid_iban}" do
@@ -69,7 +69,7 @@ describe BankValidator do
   end
   describe '#validate_bic' do
     let(:options) { {} }
-    subject { BankValidator.new(options).send(:validate_bic, record) }
+    subject { BankValidator::Validator.new(options).send(:validate_bic, record) }
     let(:record) { mock_with(bic: bic) }
     [ '12RIFRPP812', 'AGRIFRPP81', 'AGRI23PP812' ].each do |invalid_bic|
       context "bic: #{invalid_bic}" do
@@ -92,7 +92,7 @@ describe BankValidator do
   end
   describe 'requiring both or none' do
     let(:options) { {} }
-    let(:bankvalidator) { BankValidator.new(options) }
+    let(:bankvalidator) { BankValidator::Validator.new(options) }
     subject { bankvalidator.validate(record) }
     let(:record) { mock_with(iban: iban, bic: bic) }
     context "when both are missing" do
@@ -140,6 +140,5 @@ describe BankValidator do
         subject
       end
     end
-
   end
 end

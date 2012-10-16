@@ -1,3 +1,4 @@
+require 'active_model'
 module BankValidator
   class Validator < ActiveModel::Validator
 
@@ -30,3 +31,5 @@ module BankValidator
     end
   end
 end
+require('active_support/i18n')
+I18n.load_path << File.dirname(__FILE__) + '/locale/'

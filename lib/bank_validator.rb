@@ -1,1 +1,1 @@
-require 'bank_validator/validator'
+require 'bank_validator/bank_validator'
