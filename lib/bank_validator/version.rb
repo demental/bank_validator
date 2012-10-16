@@ -1,1 +1,3 @@
-BankValidator::VERSION = 0.1
+module BankValidator
+  VERSION = 0.1
+end

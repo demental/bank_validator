@@ -22,7 +22,7 @@ Include it in your model and call it with validate_with
 
   class User < ActiveRecord::Base
     include ActiveModel::Validations
-    validates_with BankValidator
+    validates_with BankValidator::Validator
   end
 
 ## Options
