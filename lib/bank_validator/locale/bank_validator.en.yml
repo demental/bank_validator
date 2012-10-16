@@ -1,0 +1,5 @@
+en:
+  errors:
+    messages:
+      none_or_both_bic_iban: Please fill in both BIC and IBAN
+      country_code_missing_in_iban: IBAN must start with a country code (e.g. UK)

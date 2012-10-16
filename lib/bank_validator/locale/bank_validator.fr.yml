@@ -1,0 +1,5 @@
+fr:
+  errors:
+    messages:
+      none_or_both_bic_iban: Veuillez entrer à la fois le bic et l'IBAN
+      country_code_missing_in_iban: Votre IBAN doit commencer par un code pays (FR par ex.)

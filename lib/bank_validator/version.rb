@@ -1,0 +1,1 @@
+BankValidator::VERSION = 0.1
