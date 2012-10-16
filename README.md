@@ -25,6 +25,12 @@ Include it in your model and call it with validate_with
       validates_with BankValidator::Validator
     end
 
+## I18n
+
+French and english translations available and loaded.
+If you want to add more translations, add a new file at your project's config/locale, nd check the embedded translations for the structure of the yml
+
+
 ## Options
 
 You can pass allow_nil: false if you want the bankdata to be required. True by default.
