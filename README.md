@@ -1,5 +1,8 @@
 # BankValidator
 
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/demental/bank_validator)
+{<img src="https://secure.travis-ci.org/demental/bank_validator.png" />}[http://travis-ci.org/demental/bank_validator]
+
 This validator using ActiveModel is aimed at validating a model that has BIC and IBAN fields
 
 ## Installation
