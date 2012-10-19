@@ -38,6 +38,13 @@ If you want to add more translations, add a new file at your project's config/lo
 
 You can pass allow_nil: false if you want the bankdata to be required. True by default.
 
+## Roadmap
+
+* Adding some SWIFT validation
+* Find if we can add some more checksum if possible
+* One day maybe, write an API for SEPA generation !
+* Make it ruby 1.8 compatible (but I love the new 1.9 hash syntax too much)
+
 ## Contributing
 
 1. Fork it
